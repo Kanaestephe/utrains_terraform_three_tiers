@@ -142,7 +142,7 @@ resource "aws_instance" "webserver1" {
   user_data              = file("install_apache.sh")
 
   tags = {
-    Name = "Web Server"
+    Name = "Web Server 1"
   }
 
 }
@@ -156,7 +156,7 @@ resource "aws_instance" "webserver2" {
   user_data              = file("install_apache.sh")
 
   tags = {
-    Name = "Web Server"
+    Name = "Web Server 2"
   }
 
 }
@@ -289,7 +289,7 @@ resource "aws_db_instance" "default" {
   allocated_storage      = 10
   db_subnet_group_name   = aws_db_subnet_group.default.id
   engine                 = "mysql"
-  engine_version         = "8.0.20"
+  engine_version         = "8.0"
   instance_class         = "db.t2.micro"
   multi_az               = true
   name                   = "mydb"
